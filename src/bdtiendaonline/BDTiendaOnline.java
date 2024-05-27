@@ -35,7 +35,9 @@ public class BDTiendaOnline {
             
             conexion = DriverManager.getConnection(url,usuario,paswword);
             statement = conexion.createStatement();
-            statement.executeUpdate("INSERT INTO comprador(CC,NOMBRE,CONTRASEÑA,DIRECCION,TEL) VALUES('1044609397','JUAN','JUAN123','CR11 N7-57','3015061515')");
+            statement.executeUpdate("INSERT INTO comprador(CC,NOMBRE,CONTRASEÑA,DIRECCION,TEL) VALUES('1044609398','JHONATAN','JHONATAN123','CR14 N13-55','3045761520')");
+            statement.executeUpdate("UPDATE comprador SET NOMBRE='CAMILO' WHERE NOMBRE='JUAN'");
+            statement.executeUpdate("DELETE FROM comprador WHERE CC='1044609397'");
             rs = statement.executeQuery("SELECT * FROM comprador");
             rs.next();
             
